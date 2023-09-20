@@ -45,6 +45,7 @@ header{
 .logo img{
     width: 40px;
 }
+
 .navbar{
    display: flex; 
 }
@@ -66,8 +67,9 @@ header{
     bottom: -4px;
     left: 0;
     transition: 0.5s;
-}  
+} 
 
+/* ========== NAVBAR ========== */
 .navbar a:hover::after{
     width: 100%;
 }  
@@ -84,7 +86,7 @@ header{
 }
 
 .header-btn .sign-in {
-  background: #474fa0;
+  background: #ffd000;
   color: #fff;
   border-radius: 0.5rem;
 }
@@ -156,7 +158,7 @@ header{
     padding: 10px 34px; 
     border: none;
     border-radius: 0.5rem;
-    background: #474fa0;
+    background: #ffd000;
     color: #fff;
     font-size: 1rem;
     font-weight: 500;
@@ -288,44 +290,93 @@ header{
     background: var(--main-color);
 }
 
-/*========== REVIEWS ==========*/
-.reviews-container{
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, auto));
-  gap: 1rem;
-  margin-top: 2rem;
+/*========== CONTACTS ==========*/
+.contact{
+    margin: 2rem 0 0;
 }
-.rev-img{
-    width: 70px;
-    height: 70px;
+.contact-container{
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 4rem;
+    padding: 4rem;
+    background: #f9f9f9; 
+    /* background-color: #ffd000; */
+    height: 25rem;
+    margin: 7rem;
+    border-radius: 1rem;
 }
-.rev-img img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    object-fit: cover;
-    object-position: center;
-    border: 2px solid var(--second-color);
+.contact-aside{
+    background: #ffd000;
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+    bottom: 10rem;
 }
-.reviews-container .box{
+.coontact-aside h2{
+    margin-bottom: 1.5rem;
+    text-align: start;
+}
+.contact .contact-info li{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+}
+.contact .contact-info li h5{
+    font-weight: 500;
+    font-size: .9rem;
+}
+.contact-aside p{
+    margin-bottom: 2rem;
+}
+.contact-social{
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.contact-social i:hover{
+    color: #fff;
+    cursor: pointer; 
+}
+.contact-form{
    display: flex;
    flex-direction: column;
-   align-items: center;
-   text-align: center;
-   padding: 20px;
-   box-shadow: 1px 4px 41px rgba(0, 0, 0, 0.1);
-   border-radius: 0.5rem;
+   gap: 1.2rem;
+   margin-right: 2rem;
 }
-.reviews-container .box h2{
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin: 0.5rem 0 0.5rem;
+.contact-form .form-name{
+    display: flex;
+    gap: 1.2rem;
 }
-.reviews-container .box p{
-    font-style: italic;
+input, textarea{
+    border: none;
+    border-radius: .3rem;
+    padding: .3rem;
 }
-.reviews-container .box.stars .bx {
-  color: var(--main-color);
+.contact-form input[type='text']{
+   width: 50%;
+}
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    padding: .5rem 1rem;
+    border-radius: .2rem;
+}
+.contact-form .btn{
+    display: inline-block;
+    background: #ffd000;
+    width: 11rem;
+    border-radius: .5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: .9rem;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    transition: all .4s ease;
+}
+.btn:hover{
+    background: #fff;
+    color:#ffd000;
 }
 
 /*========== NEWSLETTER ==========*/
