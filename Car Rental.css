@@ -291,8 +291,9 @@ header{
 }
 
 /*========== CONTACTS ==========*/
-.contact{
+ .contact{
     margin: 2rem 0 0;
+    padding: 50px 40px;
 }
 .contact-container{
     display: grid;
@@ -300,8 +301,8 @@ header{
     gap: 4rem;
     padding: 4rem;
     background: #f9f9f9; 
-    /* background-color: #ffd000; */
-    height: 25rem;
+    height: 28rem;
+    width: 60rem;
     margin: 7rem;
     border-radius: 1rem;
 }
@@ -362,10 +363,11 @@ input, textarea{
     padding: .5rem 1rem;
     border-radius: .2rem;
 }
-.contact-form .btn{
+.btn1{
     display: inline-block;
     background: #ffd000;
     width: 11rem;
+    height: 3rem;
     border-radius: .5rem;
     margin-top: 1rem;
     cursor: pointer;
@@ -373,8 +375,9 @@ input, textarea{
     text-transform: capitalize;
     letter-spacing: .1rem;
     transition: all .4s ease;
+    border: none;
 }
-.btn:hover{
+.btn1:hover{
     background: #fff;
     color:#ffd000;
 }
@@ -422,6 +425,7 @@ input, textarea{
 }
 
 /*========== Reponsive Design ========== */
+
 @media (max-width: 991px){
     header{
         padding: 18px 40px;
