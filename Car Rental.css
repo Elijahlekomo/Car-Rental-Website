@@ -11,10 +11,12 @@
     font-family: 'Poppins', sans-serif;
 }
 :root{
-    --main-color: #3dd7fe;
-    --second-color: #ffac38;
+    --main-color: #3c85e4;
+    --second-color: rgb(236, 91, 63);
     --text-color: #444;
-    --gradient:linear-gradient( #fe5b3d,  #ffac38);
+    --white-color: #eeeff1;
+    --body-color: #ffffff;
+    --gradient:linear-gradient( var(--second-color),  var(--main-color));
 }
 /* ========== Custom Scroll Bar ========== */
 html::-webkit-scrollbar{
@@ -39,7 +41,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #eeeff1;
+    background: var(--white-color);
     padding: 15px 100px;  
 }
 .logo img{
@@ -86,8 +88,8 @@ header{
 }
 
 .header-btn .sign-in {
-  background: #ffd000;
-  color: #fff;
+  background: var(--second-color);
+  color: var(--body-color);
   border-radius: 0.5rem;
 }
 .header-btn .sign-in:hover{
@@ -101,7 +103,7 @@ header{
     position: relative;
     background: url(img/Car\ Website\ –\ 1@2x.png);
     background-repeat: no-repeat;
-    background-position: center right;
+    background-position: center left;
     background-size: cover;
     display: grid;
     align-items: center;
@@ -133,7 +135,7 @@ header{
     position: absolute;
     bottom: 4rem;
     left: 100px;
-    background: #fff;
+    background: var(--body-color);
     padding: 20px;
     border-radius: 0.5rem;
 }
@@ -158,8 +160,8 @@ header{
     padding: 10px 34px; 
     border: none;
     border-radius: 0.5rem;
-    background: #ffd000;
-    color: #fff;
+    background: var(--second-color);
+    color: var(--body-color);
     font-size: 1rem;
     font-weight: 500;
 }
@@ -201,7 +203,7 @@ header{
 .ride-container .box .bx:hover,
 .ride-container .box .bxs-calendar-check{
     background: var(--gradient);
-    color: #fff;
+    color: var(--body-color);
 }
 
 /* ========== Services-Container ==========*/
@@ -251,13 +253,14 @@ header{
 .services-container .box .btn{
     display: flex;
     justify-content: center;
-    background: #474fa0;
-    color: #fff;
+    background: var(--second-color);
+    color: var(--body-color);
     padding: 10px;
     border-radius: 0.5rem;
 }
 .services-container .box .btn:hover{
-    background: var(--main-color);
+    background: var(--white-color);
+    color: var(--main-color);
 }
 
 /* ========== ABOUT ==========*/
@@ -282,12 +285,13 @@ header{
 }
 .about-text .btn{
     padding: 10px 20px;
-    background: #474fa0;
-    color: #fff;
+    background: var(--second-color);
+    color: var(--body-color);
     border-radius: 0.5rem;
 }
 .about-text .btn:hover{
-    background: var(--main-color);
+    background: var(--white-color);
+    color: var(--main-color);
 }
 
 /*========== CONTACTS ==========*/
@@ -307,7 +311,7 @@ header{
     border-radius: 1rem;
 }
 .contact-aside{
-    background: #ffd000;
+    background: var(--main-color);
     padding: 2rem;
     border-radius: 1rem;
     position: relative;
@@ -365,7 +369,7 @@ input, textarea{
 }
 .btn1{
     display: inline-block;
-    background: #ffd000;
+    background: var(--second-color);
     width: 11rem;
     height: 3rem;
     border-radius: .5rem;
@@ -379,12 +383,12 @@ input, textarea{
 }
 .btn1:hover{
     background: #fff;
-    color:#ffd000;
+    color:var(--main-color);
 }
 
 /*========== NEWSLETTER ==========*/
 .newsletter{
-   background: linear-gradient(to top right, #fe5b3d, #ffac38);
+   background: var(--main-color);
    display: flex; 
    flex-direction: column;
    align-items: center;
@@ -395,7 +399,7 @@ input, textarea{
 }
 .newsletter .box{
     margin-top: 1rem;
-    background: #fff;
+    background: var(--body-color);
     border-radius: 0.5rem;
     padding: 4px 8px;
     width: 350px;
@@ -407,7 +411,7 @@ input, textarea{
    outline: none;
 }
 .newsletter .box .btn{
-  background: #474fa0;
+  background: var(--second-color);
   color: #fff;
   padding: 8px 20px;
   border-radius: 0.5rem;
