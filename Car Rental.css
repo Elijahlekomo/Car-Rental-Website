@@ -360,7 +360,7 @@ header {
     color: var(--main-color);
 }
 
-/* ========== ABOUT ==========*/
+/* ==================== ABOUT ====================*/
 .about-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -396,10 +396,10 @@ header {
     color: var(--main-color);
 }
 
-/*========== CONTACTS ==========*/
+/*==================== CONTACTS ====================*/
 .contact {
     margin: 2rem 0 0;
-    padding: 50px 40px;
+    /* padding: 50px 40px; */
 }
 
 .contact-container {
@@ -407,10 +407,9 @@ header {
     grid-template-columns: 40% 60%;
     gap: 4rem;
     padding: 4rem;
-    background: #f9f9f9;
-    height: 28rem;
-    width: 60rem;
-    margin: 7rem;
+    background: var(--second-color);
+    height: 27rem;
+    margin: 7rem auto;
     border-radius: 1rem;
 }
 
@@ -461,16 +460,9 @@ header {
     margin-right: 2rem;
 }
 
-.contact-form .form-name {
+ .contact-form .form-name {
     display: flex;
     gap: 1.2rem;
-}
-
-input,
-textarea {
-    border: none;
-    border-radius: .3rem;
-    padding: .3rem;
 }
 
 .contact-form input[type='text'] {
@@ -479,20 +471,24 @@ textarea {
 
 .contact-form input,
 .contact-form textarea {
+    border: none;
     width: 100%;
     padding: .5rem 1rem;
     border-radius: .2rem;
-}
+} 
 
+.contact-form textarea{
+    resize: inherit;
+}
 .btn1 {
     display: inline-block;
-    background: var(--second-color);
-    width: 11rem;
-    height: 3rem;
+    background: var(--main-color);
+    width: 9rem;
+    height: 2.5rem;
     border-radius: .5rem;
     margin-top: 1rem;
     cursor: pointer;
-    font-size: .9rem;
+    font-size: .8rem;
     text-transform: capitalize;
     letter-spacing: .1rem;
     transition: all .4s ease;
@@ -504,7 +500,7 @@ textarea {
     color: var(--main-color);
 }
 
-/*========== NEWSLETTER ==========*/
+/*==================== NEWSLETTER ====================*/
 .newsletter {
     background: var(--main-color);
     display: flex;
@@ -539,47 +535,54 @@ textarea {
     border-radius: 0.5rem;
 }
 
-/*==================== FOOTER ====================*/
+/* ==================== FOOTER ==================== */
 footer {
-    padding: 4rem 3rem;
+    padding: 4rem 2rem;
     background: var(--color-text);
     color: var(--color-primary);
 }
 footer .logo img{
     width: 130px;
 }
-.container {
+
+.footer-container{
     margin: 0 auto;
     width: var(80%);
-}
-.footer-container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 5rem;
 }
+
 footer li,
 footer p{
     color: var(--color-primary);
     margin-bottom: 1rem;
-    text-transform: capitalize;
 }
+
 footer li a{
     color: var(--color-primary);
 }
+
 footer li a:hover,
 footer .footer-social i:hover{
     color: var(--color-secondary);
     cursor: pointer;
 }
+
 footer .footer-social{
     display: flex;
     gap: 1rem;
     margin-top: 2rem;
 }
+
 footer h4{
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
 }  
+
+
+/* ==================== COPYRIGHT ==================== */
+
 .copyright {
    text-align: center;
    padding: 1rem 0;
@@ -606,6 +609,10 @@ footer h4{
     section {
         padding: 50px 40px;
     }
+
+    .contact-form .btn1{
+        margin-bottom: 2rem;
+    }
 }
 
 @media (max-width: 881px) {
@@ -613,23 +620,27 @@ footer h4{
         background-position: left;
     }
 
+    section .contact{
+        padding: 3rem 0 0; 
+    }
     .form-container form {
         bottom: 0.2rem;
         left: 40px;
     }
-    .container footer-container{
+    /* .container footer-container{
         width: 90%;
-    }
+    } */
     .contact-container{
         grid-template-columns: 100%;
         gap: 4rem 0;
         padding: 0 1rem;
         height: auto;
     }
-
+    
     .contact-aside{
         bottom: 0;
     }
+ 
     .footer-container{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -718,6 +729,7 @@ footer h4{
     .contact .title{
         margin-bottom: 0;
     }
+    
 }
 
 @media(max-width: 568px) {
@@ -726,7 +738,11 @@ footer h4{
     }
 
     .newsletter .box {
-        width: 284px;
+        width: 290px;
+    }
+
+    .newsletter .box .btn {
+        padding: 6px 16px;
     }
 
     .form-container {
@@ -746,7 +762,15 @@ footer h4{
         /* object-fit: cover; */
         object-position: center;
     }
-    .
+    .contact-container {        
+        margin: 7rem auto;
+    }
+        /* .newsletter .box .btn {
+            margin-right: 20rem;
+        } */
+    .footer-container{
+        column-gap: 1rem;
+    }
 }
 
 @media(max-width: 350px) {
@@ -777,6 +801,9 @@ footer h4{
     }
     .carInfo li {
         padding: 2px;
+    }
+    .footer-container{
+        grid-template-columns: repeat(1, 1fr);
     }
     
 }
