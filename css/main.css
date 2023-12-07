@@ -80,7 +80,7 @@ header {
     content: "";
     width: 0;
     height: 3px;
-    background: var(--gradient);
+    background: var(--main-color);
     position: absolute;
     bottom: -4px;
     left: 0;
@@ -117,17 +117,21 @@ header {
 
 /* ========== HOME ========== */
 .home {
-    width: 100%;
+    width: 95%;
     min-height: 100vh;
     position: relative;
-    background: url(img/Car\ Website\ –\ 1@2x.png);
-    background-repeat: no-repeat;
-    background-position: center left;
-    background-size: cover;
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
+    margin-top: -3rem;
 }
+
+.home .car{
+    width: 600px;
+    position: absolute;
+    right: 0;  
+    z-index: -1; 
+} 
 
 .text h1 {
     font-size: 3.5rem;
@@ -140,10 +144,6 @@ header {
 
 .text p {
     margin: 00.5rem 0 1rem;
-}
-
-.app-stores {
-    display: flex;
 }
 
 .app-stores img {
@@ -269,7 +269,6 @@ header {
 .services-container .box .box-img img {
     width: 100%;
     height: 100%;
-    /* border-radius: rem; */
     object-fit: cover;
     object-position: center;
 }
@@ -600,7 +599,6 @@ footer h4{
 }
 
 /*========== Reponsive Design ========== */
-
 @media (max-width: 991px) {
     header {
         padding: 18px 40px;
@@ -610,16 +608,21 @@ footer h4{
         padding: 50px 40px;
     }
 
+    .home {
+        background-size: auto;
+    }
     .contact-form .btn1{
         margin-bottom: 2rem;
     }
+    .home .car{
+        width: 550px;      
+    } 
 }
 
 @media (max-width: 881px) {
-    .home {
-        background-position: left;
-    }
-
+    .home .car{
+        width: 500px;      
+    }   
     section .contact{
         padding: 3rem 0 0; 
     }
@@ -627,9 +630,7 @@ footer h4{
         bottom: 0.2rem;
         left: 40px;
     }
-    /* .container footer-container{
-        width: 90%;
-    } */
+  
     .contact-container{
         grid-template-columns: 100%;
         gap: 4rem 0;
@@ -644,9 +645,25 @@ footer h4{
     .footer-container{
         grid-template-columns: repeat(2, 1fr);
     }
+    
 }
 
 @media (max-width: 768px) {
+    .home{
+        margin-top: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .text .car{
+        display: none;
+      }
+
+      .text h1 {
+        font-size: 4rem;
+        letter-spacing: 2px;
+        }
+
     header {
         padding: 11px 40px;
     }
@@ -659,9 +676,10 @@ footer h4{
         display: none;
     }
 
-    .text h1 {
-        font-size: 2.5rem;
-    }
+    .home .car{    
+        display: none;
+        
+    } 
 
     .home {
         grid-template-columns: 1fr;
@@ -733,6 +751,10 @@ footer h4{
 }
 
 @media(max-width: 568px) {
+   
+    .text h1 {
+        font-size: 3rem;
+        }
     .copyright {
         flex-direction: column;
     }
@@ -759,15 +781,13 @@ footer h4{
     .services-container .box .box-img img {
         width: 300px;
         height: 100%;
-        /* object-fit: cover; */
+        object-fit: cover;
         object-position: center;
     }
     .contact-container {        
         margin: 7rem auto;
     }
-        /* .newsletter .box .btn {
-            margin-right: 20rem;
-        } */
+       
     .footer-container{
         column-gap: 1rem;
     }
