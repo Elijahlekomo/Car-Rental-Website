@@ -746,9 +746,9 @@ footer h4{
         margin-bottom: 1rem; 
     }
     
-    /* .input-box {
+    .input-box {
         flex: 1 1 100%;
-    } */
+    }
 }
 
 /* @media only screen and (max-width: 768px) {
