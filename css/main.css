@@ -791,9 +791,7 @@ footer h4{
         left: 0;
         padding: 10px; 
     }
-    .input-box {
-        flex: 1 1 100%;
-    }
+    
 }
 
 @media(max-width: 568px) {
@@ -801,6 +799,9 @@ footer h4{
     width: 100%;
     background-color: var(--main-color);
    }
+   .input-box {
+    flex: 1 1 100%;
+    }
    .text{
     z-index: 1;
    }
@@ -811,17 +812,7 @@ footer h4{
         flex-direction: column;
     }
     
-    /* .newsletter .box {
-        width: 290px;
-    }
 
-    .newsletter .box .btn {
-        padding: 6px 16px;
-    } */
-
-    /* .form-container {
-        padding-top: 2rem;
-    } */
     .carInfo li {
         padding: 5px;
     }
