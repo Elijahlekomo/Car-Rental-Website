@@ -3,10 +3,9 @@ An engaging and user-friendly car rental website, that allows users to rent cars
 
 🌐 [Live View](https://go-digital-business.vercel.app)   
 Built project with:   
- 
- - JavaScript
  - HTML
  - CSS
+ - JavaScript
 ## Screenshot of the project     
 🏠 __Home Page__    
 
